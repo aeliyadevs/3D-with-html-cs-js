@@ -58,14 +58,14 @@ body {
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
-  transform-origin: 30% 50%;
+  // transform-origin: 30% 50%;
   animation: rotate-360-vert linear infinite 10s;
   .heading {
     // width: 400px;
     background: linear-gradient(35deg, rgb(236, 134, 205), rgb(227, 230, 52));
     padding: 30px;
     border-radius: 12px;
-    margin-left: -300px;
+    // margin-left: -300px;
     animation: reverse-360-vert linear infinite 10s;
     h2 {
       font-size: 90px;
@@ -91,18 +91,18 @@ body {
 
 @keyframes rotate-360-hori {
   from {
-    transform: perspective(1000px) rotateX(12deg) rotateY(360deg);
+    transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
   }
   to {
-    transform: perspective(1000px) rotateX(12deg) rotateY(0deg);
+    transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
   }
 }
 @keyframes reverse-360-hori {
   from {
-    transform: rotateY(0deg) translateY(100px);
+    transform: rotateY(0deg) translateY(-100px);
   }
   to {
-    transform: rotateY(360deg) translateY(100px);
+    transform: rotateY(360deg) translateY(-100px);
   }
 }
 @keyframes rotate-360-vert {
@@ -119,5 +119,41 @@ body {
   }
   to {
     transform: rotateX(360deg) translateY(0);
+  }
+}
+
+// Animate based on scroll event
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background: whitesmoke;
+  .scroll-animate {
+    width: 1280px;
+    height: inherit;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    .item {
+      width: 450px;
+      height: 200px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 28px;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-family: sans-serif;
+      background: url("https://t3.ftcdn.net/jpg/05/74/56/80/360_F_574568031_byh2FksrLAf9qeQkRfEMc4cQpRppakj7.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 10px;
+      box-shadow: inset 2px 2px 8px #fff;
+    }
   }
 }
