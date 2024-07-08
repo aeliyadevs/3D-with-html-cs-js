@@ -1,6 +1,6 @@
 window.onload = function () {
   const cards = document.querySelectorAll(".card");
-  const radius = 500;
+  const radius = 350;
   const zAngle = 360 / cards.length;
   //   console.log(cards.length);
   cards.forEach((card, index) => {

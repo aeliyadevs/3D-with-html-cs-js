@@ -15,7 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
-  transform: perspective(1000px);
+  animation: rotate-360 linear infinite 10s;
 }
 .wrapper .card {
   width: 200px;
@@ -23,7 +23,6 @@ body {
   border-radius: 10px;
   padding: 15px;
   position: absolute;
-  opacity: 0.5;
 }
 .wrapper .card.card-1 {
   background: teal;
@@ -42,4 +41,19 @@ body {
 }
 .wrapper .card.card-6 {
   background: darkcyan;
+}
+.wrapper .card.card-7 {
+  background: gold;
+}
+.wrapper .card.card-8 {
+  background: mediumslateblue;
+}
+
+@keyframes rotate-360 {
+  from {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateY(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
