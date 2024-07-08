@@ -14,10 +14,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  //   perspective: 1000px;
+  //   perspective-origin: center;
   .card {
     width: 200px;
     height: 250px;
     border-radius: 10px;
-    background: #dddddd;
+    padding: 15px;
+    position: absolute;
+    opacity: 0.5;
+    &.card-1 {
+      background: teal;
+      //   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(500px);
+    }
+    &.card-2 {
+      background: olivedrab;
+      //   transform: rotateX(0deg) rotateY(60deg) rotateZ(0deg) translateZ(500px);
+    }
+    &.card-3 {
+      background: palegreen;
+      //   transform: rotateX(0deg) rotateY(120deg) rotateZ(0deg) translateZ(500px);
+    }
+    &.card-4 {
+      background: wheat;
+      //   transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) translateZ(500px);
+    }
+    &.card-5 {
+      background: salmon;
+      //   transform: rotateX(0deg) rotateY(240deg) rotateZ(0deg) translateZ(500px);
+    }
+    &.card-6 {
+      background: darkcyan;
+      //   transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg) translateZ(500px);
+    }
   }
 }

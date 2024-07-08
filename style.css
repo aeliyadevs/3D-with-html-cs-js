@@ -14,10 +14,32 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
 }
 .wrapper .card {
   width: 200px;
   height: 250px;
   border-radius: 10px;
-  background: #dddddd;
+  padding: 15px;
+  position: absolute;
+  opacity: 0.5;
+}
+.wrapper .card.card-1 {
+  background: teal;
+}
+.wrapper .card.card-2 {
+  background: olivedrab;
+}
+.wrapper .card.card-3 {
+  background: palegreen;
+}
+.wrapper .card.card-4 {
+  background: wheat;
+}
+.wrapper .card.card-5 {
+  background: salmon;
+}
+.wrapper .card.card-6 {
+  background: darkcyan;
 }/*# sourceMappingURL=style.css.map */
