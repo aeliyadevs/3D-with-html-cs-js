@@ -26,7 +26,7 @@ body {
     background: linear-gradient(35deg, rgb(236, 134, 205), rgb(227, 230, 52));
     padding: 30px;
     border-radius: 12px;
-    animation: reverse-360 linear infinite 10s;
+    animation: reverse-360-hori linear infinite 10s;
     h2 {
       font-size: 90px;
       font-weight: 700;
@@ -58,14 +58,15 @@ body {
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
-  // transform-origin: 30% 50%;
+  transform-origin: 30% 50%;
   animation: rotate-360-vert linear infinite 10s;
   .heading {
     // width: 400px;
-    background: white;
+    background: linear-gradient(35deg, rgb(236, 134, 205), rgb(227, 230, 52));
     padding: 30px;
     border-radius: 12px;
-    animation: reverse-360 linear infinite 10s;
+    margin-left: -300px;
+    animation: reverse-360-vert linear infinite 10s;
     h2 {
       font-size: 90px;
       font-weight: 700;
@@ -76,7 +77,7 @@ body {
   }
   .card-vert {
     width: 500px;
-    height: 250px;
+    height: 200px;
     border-radius: 10px;
     padding: 15px;
     position: absolute;
@@ -96,6 +97,14 @@ body {
     transform: perspective(1000px) rotateX(12deg) rotateY(0deg);
   }
 }
+@keyframes reverse-360-hori {
+  from {
+    transform: rotateY(0deg) translateY(100px);
+  }
+  to {
+    transform: rotateY(360deg) translateY(100px);
+  }
+}
 @keyframes rotate-360-vert {
   from {
     transform: perspective(1500px) rotateX(360deg) rotateY(0deg);
@@ -104,11 +113,11 @@ body {
     transform: perspective(1500px) rotateX(0deg) rotateY(0deg);
   }
 }
-@keyframes reverse-360 {
+@keyframes reverse-360-vert {
   from {
-    transform: rotateY(0deg) translateY(100px);
+    transform: rotateX(0deg) translateY(0);
   }
   to {
-    transform: rotateY(360deg) translateY(100px);
+    transform: rotateX(360deg) translateY(0);
   }
 }
