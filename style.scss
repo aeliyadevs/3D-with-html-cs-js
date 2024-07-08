@@ -19,17 +19,32 @@ body {
   //   transform: perspective(1000px);
   animation: rotate-360-hori linear infinite 10s;
   //   perspective: 1000px;
-  //   perspective-origin: center;
+  // perspective-origin: top;
   position: relative;
+  .heading {
+    // width: 400px;
+    background: linear-gradient(35deg, rgb(236, 134, 205), rgb(227, 230, 52));
+    padding: 30px;
+    border-radius: 12px;
+    animation: reverse-360 linear infinite 10s;
+    h2 {
+      font-size: 90px;
+      font-weight: 700;
+      // text-decoration: underline;
+      color: #000;
+      text-align: center;
+    }
+  }
   .card-hori {
     width: 300px;
     height: 200px;
     border-radius: 10px;
     padding: 15px;
     position: absolute;
+    color: white;
     background-image: url("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
     background-size: cover;
-    border: 3px solid white;
+    box-shadow: inset 2px 2px 10px white;
   }
 }
 
@@ -43,25 +58,42 @@ body {
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
+  // transform-origin: 30% 50%;
   animation: rotate-360-vert linear infinite 10s;
+  .heading {
+    // width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    animation: reverse-360 linear infinite 10s;
+    h2 {
+      font-size: 90px;
+      font-weight: 700;
+      // text-decoration: underline;
+      color: #000;
+      text-align: center;
+    }
+  }
   .card-vert {
     width: 500px;
-    height: 200px;
+    height: 250px;
     border-radius: 10px;
     padding: 15px;
     position: absolute;
+    color: white;
     background-image: url("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
     background-size: cover;
+    box-shadow: inset 2px 2px 10px white;
     // opacity: 0.5;
   }
 }
 
 @keyframes rotate-360-hori {
   from {
-    transform: perspective(1000px) rotateX(0) rotateY(360deg);
+    transform: perspective(1000px) rotateX(12deg) rotateY(360deg);
   }
   to {
-    transform: perspective(1000px) rotateX(0) rotateY(0deg);
+    transform: perspective(1000px) rotateX(12deg) rotateY(0deg);
   }
 }
 @keyframes rotate-360-vert {
@@ -70,5 +102,13 @@ body {
   }
   to {
     transform: perspective(1500px) rotateX(0deg) rotateY(0deg);
+  }
+}
+@keyframes reverse-360 {
+  from {
+    transform: rotateY(0deg) translateY(100px);
+  }
+  to {
+    transform: rotateY(360deg) translateY(100px);
   }
 }
