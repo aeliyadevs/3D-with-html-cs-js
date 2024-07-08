@@ -5,9 +5,10 @@
 
 body {
   background: #101010;
+  overflow-x: hidden;
 }
 
-.wrapper {
+.wrapper-1 {
   max-width: 1280px;
   height: 100vh;
   margin: 0 auto;
@@ -16,56 +17,58 @@ body {
   align-items: center;
   transform-style: preserve-3d;
   //   transform: perspective(1000px);
-  animation: rotate-360 linear infinite 10s;
+  animation: rotate-360-hori linear infinite 10s;
   //   perspective: 1000px;
   //   perspective-origin: center;
-  .card {
-    width: 200px;
-    height: 250px;
+  position: relative;
+  .card-hori {
+    width: 300px;
+    height: 200px;
     border-radius: 10px;
     padding: 15px;
     position: absolute;
-    // opacity: 0.5;
-    &.card-1 {
-      background: teal;
-      //   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(500px);
-    }
-    &.card-2 {
-      background: olivedrab;
-      //   transform: rotateX(0deg) rotateY(60deg) rotateZ(0deg) translateZ(500px);
-    }
-    &.card-3 {
-      background: palegreen;
-      //   transform: rotateX(0deg) rotateY(120deg) rotateZ(0deg) translateZ(500px);
-    }
-    &.card-4 {
-      background: wheat;
-      //   transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg) translateZ(500px);
-    }
-    &.card-5 {
-      background: salmon;
-      //   transform: rotateX(0deg) rotateY(240deg) rotateZ(0deg) translateZ(500px);
-    }
-    &.card-6 {
-      background: darkcyan;
-      //   transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg) translateZ(500px);
-    }
-    &.card-7 {
-      background: gold;
-      //   transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg) translateZ(500px);
-    }
-    &.card-8 {
-      background: mediumslateblue;
-      //   transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg) translateZ(500px);
-    }
+    background-image: url("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
+    background-size: cover;
+    border: 3px solid white;
   }
 }
 
-@keyframes rotate-360 {
+.wrapper-2 {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  animation: rotate-360-vert linear infinite 10s;
+  .card-vert {
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 15px;
+    position: absolute;
+    background-image: url("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
+    background-size: cover;
+    // opacity: 0.5;
+  }
+}
+
+@keyframes rotate-360-hori {
   from {
-    transform: perspective(1000px) rotateY(0deg);
+    transform: perspective(1000px) rotateX(0) rotateY(360deg);
   }
   to {
-    transform: perspective(1000px) rotateY(360deg);
+    transform: perspective(1000px) rotateX(0) rotateY(0deg);
+  }
+}
+@keyframes rotate-360-vert {
+  from {
+    transform: perspective(1500px) rotateX(360deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1500px) rotateX(0deg) rotateY(0deg);
   }
 }

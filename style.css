@@ -5,9 +5,10 @@
 
 body {
   background: #101010;
+  overflow-x: hidden;
 }
 
-.wrapper {
+.wrapper-1 {
   max-width: 1280px;
   height: 100vh;
   margin: 0 auto;
@@ -15,45 +16,55 @@ body {
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
-  animation: rotate-360 linear infinite 10s;
+  animation: rotate-360-hori linear infinite 10s;
+  position: relative;
 }
-.wrapper .card {
-  width: 200px;
-  height: 250px;
+.wrapper-1 .card-hori {
+  width: 300px;
+  height: 200px;
   border-radius: 10px;
   padding: 15px;
   position: absolute;
-}
-.wrapper .card.card-1 {
-  background: teal;
-}
-.wrapper .card.card-2 {
-  background: olivedrab;
-}
-.wrapper .card.card-3 {
-  background: palegreen;
-}
-.wrapper .card.card-4 {
-  background: wheat;
-}
-.wrapper .card.card-5 {
-  background: salmon;
-}
-.wrapper .card.card-6 {
-  background: darkcyan;
-}
-.wrapper .card.card-7 {
-  background: gold;
-}
-.wrapper .card.card-8 {
-  background: mediumslateblue;
+  background-image: url("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
+  background-size: cover;
+  border: 3px solid white;
 }
 
-@keyframes rotate-360 {
+.wrapper-2 {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  animation: rotate-360-vert linear infinite 10s;
+}
+.wrapper-2 .card-vert {
+  width: 500px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 15px;
+  position: absolute;
+  background-image: url("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg");
+  background-size: cover;
+}
+
+@keyframes rotate-360-hori {
   from {
-    transform: perspective(1000px) rotateY(0deg);
+    transform: perspective(1000px) rotateX(0) rotateY(360deg);
   }
   to {
-    transform: perspective(1000px) rotateY(360deg);
+    transform: perspective(1000px) rotateX(0) rotateY(0deg);
+  }
+}
+@keyframes rotate-360-vert {
+  from {
+    transform: perspective(1500px) rotateX(360deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1500px) rotateX(0deg) rotateY(0deg);
   }
 }/*# sourceMappingURL=style.css.map */
