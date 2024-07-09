@@ -2,12 +2,92 @@
   margin: 0;
   padding: 0;
 }
-
+html {
+  font-size: 16px;
+}
 body {
   background: #101010;
   overflow-x: hidden;
+  font-family: sans-serif;
+  background: linear-gradient(145deg, #1f5b75 0%, #ffffff00 30%),
+    url("https://why-site.com/wp-content/uploads/2021/06/DKG-wHy_9.10.20-29-CROP.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
+.banner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  .content {
+    width: 500px;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    // margin-top: 100px;
+    justify-content: center;
+    gap: 20px;
+    margin-right: 75px;
+    h1 {
+      font-size: 6.5rem;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0;
+      color: #fff;
+    }
+    p {
+      font-size: 18px;
+      color: #fff;
+    }
+    button {
+      width: fit-content;
+      color: #fff;
+      background: linear-gradient(270deg, #395cc9, #20cdbe);
+      border: none;
+      padding: 20px 48px;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+  .images {
+    width: calc(100% - 500px);
+    height: inherit;
+    // background: sandybrown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    // transform-origin: 50% 50%;
+    animation: banner-rotate linear infinite 10s;
+    .banner-card {
+      width: 200px;
+      height: 250px;
+      border-radius: 10px;
+      background: white;
+      border: 5px solid white;
+      position: absolute;
+      // opacity: 0.5;
+      // transform: translateZ(500px) rotateY(260deg);
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+@keyframes banner-rotate {
+  from {
+    transform: perspective(1000px) rotateY(0);
+  }
+  to {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
 .wrapper-1 {
   max-width: 1280px;
   height: 100vh;
@@ -155,7 +235,7 @@ body {
     // transition-duration: 1000ms;
     .item {
       width: 600px;
-      height: 280px;
+      height: 300px;
       position: absolute;
       padding: 10px;
       color: white;

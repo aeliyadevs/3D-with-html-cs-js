@@ -1,4 +1,17 @@
 window.onload = function () {
+  // banner section
+  const bannerCards = document.querySelectorAll(".banner-card");
+  const bannerRadius = 350;
+  const rotateAngle = 360 / bannerCards.length;
+  bannerCards.forEach((card, index) => {
+    card.style.transform =
+      "rotateY(" +
+      rotateAngle * (index + 1) +
+      "deg) rotateX(0deg) translateY(100px) translateZ(" +
+      bannerRadius +
+      "px)";
+  });
+
   // horizontal 360 rotation
   const cards = document.querySelectorAll(".card-hori");
   const radius = 450;
@@ -63,26 +76,21 @@ items.forEach((item, index) => {
 const scrollAnimate = document.getElementById("scroll-animate");
 
 // callback function
-const handleScroll = (entries, observer) => {
-  console.log(entries);
-  // console.log(scrollAnimate.getBoundingClientRect());
-  // console.log(scrollAnimate.getBoundingClientRect().y);
-  // let pixel = (825 - scrollAnimate.getBoundingClientRect().y) / 360;
-  // console.log(pixel);
-  // scrollAnimate.style.transform =
-  //   "perspective(1000px) rotateX(" + pixel + "deg)";
-  window.onscroll = (e) => {
-    // let angle = scrollAnimate.getBoundingClientRect().y / 20;
-    const scrollRate = 6; // constant to control the scroll speed (higher => slower)
-    let angle = window.scrollY % (360 * scrollRate);
-    scrollAnimate.style.transform =
-      "perspective(1500px) rotateX(" + angle / scrollRate + "deg)";
-    console.log(angle / scrollRate);
-  };
+const handleScroll = (entries) => {
+  // console.log(entries);
+  if (entries[0].isIntersecting) {
+    window.onscroll = () => {
+      const scrollRate = 6; // constant to control the scroll speed (higher => slower)
+      let angle = window.scrollY % (360 * scrollRate);
+      scrollAnimate.style.transform =
+        "perspective(1500px) rotateX(" + angle / scrollRate + "deg)";
+      // console.log(angle / scrollRate);
+    };
+  }
 };
 
 let observer = new IntersectionObserver(handleScroll, {
-  threshold: 0.5,
+  threshold: 0.2,
   rootMargin: "0px",
 });
 
