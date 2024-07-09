@@ -113,35 +113,75 @@ body {
 }
 .wrapper {
   width: 100%;
-  height: 100vh;
+  height: 200vh;
   background: whitesmoke;
 }
 .wrapper .scroll-animate {
-  width: 1280px;
-  height: inherit;
-  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  position: sticky;
+  top: 0;
   transform-style: preserve-3d;
-  transform: perspective(1000px);
+  transform: perspective(1500px);
 }
 .wrapper .scroll-animate .item {
-  width: 450px;
-  height: 200px;
+  width: 600px;
+  height: 280px;
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 10px;
   color: white;
-  font-size: 28px;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
   font-family: sans-serif;
-  background: url("https://t3.ftcdn.net/jpg/05/74/56/80/360_F_574568031_byh2FksrLAf9qeQkRfEMc4cQpRppakj7.jpg");
+  border-radius: 8px;
+  box-shadow: inset 2px 2px 8px #fff;
+}
+.wrapper .scroll-animate .item.item-1 {
+  background: url("https://media.newyorker.com/photos/62c4511e47222e61f46c2daa/4:3/w_2663,h_1997,c_limit/shouts-animals-watch-baby-hemingway.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 10px;
-  box-shadow: inset 2px 2px 8px #fff;
+}
+.wrapper .scroll-animate .item.item-2 {
+  background: url("https://www.dartmoorzoo.org.uk/wp-content/uploads/2021/01/Tiger-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .scroll-animate .item.item-3 {
+  background: url("https://www.calgaryzoo.com/wp-content/uploads/2023/09/Daughter.YYC_.Zoo_.P.Bears_.01090.1.FF16-1024x768.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .scroll-animate .item.item-4 {
+  background: url("https://s28151.pcdn.co/wp-content/uploads/sites/2/2022/03/Coyote-animal-sentience-research.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .scroll-animate .item.item-5 {
+  background: url("https://c02.purpledshub.com/uploads/sites/62/2022/01/GettyImages-534978766-e950348.jpg?webp=1&w=1200");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .scroll-animate .item.item-6 {
+  background: url("https://cdn.hswstatic.com/gif/smart-animal.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .scroll-animate .item.item-7 {
+  background: url("https://cdn.britannica.com/71/149571-050-C33E9F0F/Brown-bear-Finland.jpg?w=920&h=518&c=crop");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .scroll-animate .item.item-8 {
+  background: url("https://www.awsfzoo.com/media/capy1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .scroll-animate .item.item-9 {
+  background: url("https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */
