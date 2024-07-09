@@ -7,7 +7,7 @@ window.onload = function () {
     card.style.transform =
       "rotateY(" +
       rotateAngle * (index + 1) +
-      "deg) rotateX(0deg) translateY(100px) translateZ(" +
+      "deg) rotateX(0deg) translateY(0) translateZ(" +
       bannerRadius +
       "px)";
   });
