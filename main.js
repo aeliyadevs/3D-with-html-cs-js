@@ -95,3 +95,12 @@ let observer = new IntersectionObserver(handleScroll, {
 });
 
 observer.observe(scrollAnimate);
+
+// turning the light off errect
+function lightsOff() {
+  // document.querySelector(".banner-wrapper").classList.remove("light-mode");
+  document.querySelector(".banner-wrapper").classList.toggle("dark-mode");
+  document.querySelectorAll(".banner-card").forEach((item) => {
+    item.classList.toggle("shadow");
+  });
+}

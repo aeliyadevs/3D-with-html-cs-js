@@ -13,11 +13,22 @@ body {
   font-family: sans-serif;
 }
 
-.banner-wrapper {
+.light-mode {
   background: linear-gradient(145deg, #1f5b75 0%, rgba(255, 255, 255, 0) 30%), url("https://why-site.com/wp-content/uploads/2021/06/DKG-wHy_9.10.20-29-CROP.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.dark-mode {
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.8392156863) 0%, rgba(0, 0, 0, 0.8392156863) 30%), url("https://why-site.com/wp-content/uploads/2021/06/DKG-wHy_9.10.20-29-CROP.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-wrapper {
+  transition-duration: 300ms;
 }
 .banner-wrapper .banner {
   width: 100%;
@@ -43,7 +54,7 @@ body {
   padding: 30px;
   border-radius: 15px;
   border: 2px solid #174164;
-  box-shadow: -6px 4px 6px #a8adb1;
+  box-shadow: -4px 1px 6px #a8adb1;
   margin-left: -30px;
   transform: rotateY(60deg);
 }
@@ -67,10 +78,15 @@ body {
   color: #fff;
   background: linear-gradient(270deg, #395cc9, #20cdbe);
   border: none;
-  padding: 20px 48px;
+  padding: 15px 48px;
   border-radius: 5px;
   font-size: 18px;
   font-weight: 500;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+.banner-wrapper .banner .content .content-box button:hover {
+  transform: scale(1.05) translateX(5px);
 }
 .banner-wrapper .banner .images {
   width: calc(100% - 600px);
@@ -97,16 +113,17 @@ body {
   height: 100%;
   border-radius: 8px;
 }
-.banner-wrapper .banner .images .banner-card::after {
+
+.shadow::after {
   content: "";
   width: 100%;
-  height: 8px;
+  height: 18px;
   border-radius: 10px;
   background: #6e6e6e;
   position: absolute;
   bottom: -130px;
   left: 0;
-  filter: blur(6px);
+  filter: blur(16px);
   transform: translateY(125px);
 }
 
