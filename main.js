@@ -51,10 +51,11 @@ const handleScroll = (entries, observer) => {
   //   "perspective(1000px) rotateX(" + pixel + "deg)";
   window.onscroll = (e) => {
     // let angle = scrollAnimate.getBoundingClientRect().y / 20;
-    let angle = window.scrollY % 360;
+    const scrollRate = 6; // constant to control the scroll speed (higher => slower)
+    let angle = window.scrollY % (360 * scrollRate);
     scrollAnimate.style.transform =
-      "perspective(1500px) rotateX(" + angle + "deg)";
-    console.log(angle);
+      "perspective(1500px) rotateX(" + angle / scrollRate + "deg)";
+    console.log(angle / scrollRate);
   };
 };
 
