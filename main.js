@@ -10,6 +10,17 @@ window.onload = function () {
       "deg) rotateZ(0deg) translateZ(" +
       radius +
       "px)";
+
+    // pause animation on hover
+    card.addEventListener("mouseover", () => {
+      card.parentElement.classList.add("paused");
+      card.parentElement.children[0].classList.add("paused");
+    });
+    // resume animation on hover
+    card.addEventListener("mouseleave", () => {
+      card.parentElement.classList.remove("paused");
+      card.parentElement.children[0].classList.remove("paused");
+    });
   });
 
   // vertical 360 rotation
@@ -23,6 +34,17 @@ window.onload = function () {
       "deg) rotateY(0deg) rotateZ(0deg) translateZ(" +
       vertRadius +
       "px)";
+
+    // pause animation on hover
+    card.addEventListener("mouseover", () => {
+      card.parentElement.classList.add("paused");
+      card.parentElement.children[0].classList.add("paused");
+    });
+    // resume animation on hover
+    card.addEventListener("mouseleave", () => {
+      card.parentElement.classList.remove("paused");
+      card.parentElement.children[0].classList.remove("paused");
+    });
   });
 };
 
